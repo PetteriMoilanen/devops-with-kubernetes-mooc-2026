@@ -1,0 +1,11 @@
+{
+  "name": "Kubernetes Dev Environment",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:1": {},
+    "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {
+      "version": "latest"
+    }
+  },
+  "postCreateCommand": "wget -qO- https://raw.githubusercontent.com/k3d-io/k3d/main/install.sh | TAG=v5.8.3 bash"
+}
